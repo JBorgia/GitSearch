@@ -1,4 +1,4 @@
-import {MainComponent} from './main/main.component';
+import {MainComponent} from './components/main/main.component';
 
 
 export const AppRoutes = [
