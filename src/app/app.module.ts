@@ -8,14 +8,19 @@ import { MyMaterialModule } from './my-material.module';
 import { AppRoutes} from './app.routes';
 
 import { AppComponent } from './app.component';
-import { MainComponent } from './main/main.component';
-import { HeaderComponent } from './header/header.component';
+import { MainComponent } from './components/main/main.component';
+import { HeaderComponent } from './components/header/header.component';
+import { GithubService } from './services/github.service';
+import { SearchComponent } from './components/search/search.component';
+import { ResultsComponent } from './components/results/results.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    HeaderComponent
+    HeaderComponent,
+    SearchComponent,
+    ResultsComponent
   ],
   imports: [
     RouterModule.forRoot(AppRoutes),
@@ -24,7 +29,7 @@ import { HeaderComponent } from './header/header.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [GithubService]
 })
 export class AppModule { }
