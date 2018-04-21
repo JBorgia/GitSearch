@@ -1,0 +1,19 @@
+.keyvalue{
+    display: flex;
+    margin-bottom: 1px;
+}
+.key{
+    color: #fff;
+    background: #4a84ff;
+    padding: 0.5rem;
+    width: 8rem;
+}
+.value{
+    border-radius: 0 0.5rem 0.5rem 0;
+    flex: auto;
+    background: #ebebeb;
+    padding: 0.5rem;
+}
+a{
+    flex: auto;
+}

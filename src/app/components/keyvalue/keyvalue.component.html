@@ -1,0 +1,9 @@
+<div class="keyvalue">
+  <div class="key">{{key}}</div>
+  <div *ngIf="isUrl; else notUrl" class="value">
+    <a [href]=user[key]>{{user[key]}}</a>
+  </div>
+  <ng-template #notUrl>
+    <div class="value">{{user[key]}}</div>
+  </ng-template>
+</div>

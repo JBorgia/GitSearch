@@ -1,0 +1,9 @@
+<div class="user">
+  <app-thumbnail [imgUrl]="imgUrl">
+      <div class="username">Login: {{user['login']}}</div>
+  </app-thumbnail>
+  <div class="keyvalues">
+    <app-keyvalue *ngFor="let key of keys| slice:1 | hideApiUrl:user" [key]="key" [user]="user">
+    </app-keyvalue>
+  </div>
+</div>

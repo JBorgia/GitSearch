@@ -1,0 +1,15 @@
+.user{
+    display: flex;
+    margin-bottom: 0.5rem;
+    app-thumbnail{
+        border-radius: 0.5rem 0 0 0.5rem;
+        color: #fff;
+        background: #4a84ff;
+        padding: 0.5rem;
+        width: 12rem;
+        margin-bottom: 1px;
+    }
+    .keyvalues{
+        flex: 1 1 auto;
+    }
+}

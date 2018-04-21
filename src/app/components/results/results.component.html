@@ -1,0 +1,4 @@
+<h3 *ngIf="(users$ | async) && total_count > 0">{{total_count}} Results</h3>
+<app-user *ngFor="let user of users$ | async | slice:0:limit; index as i "
+ [user]="user">
+</app-user>
