@@ -1,9 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule} from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MyMaterialModule } from './my-material.module';
 
 import { AppRoutes} from './app.routes';
@@ -51,6 +50,6 @@ import { HideApiUrlPipe } from './pipes/hide-api-url.pipe';
   ],
   providers: [
     GithubService
-  ]
+  ],
 })
 export class AppModule { }
