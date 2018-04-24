@@ -1,7 +1,7 @@
 <div>
   <label id="search">Search
   </label>
-  <input name="search" [formControl]="criteria" type="text">
+  <input (keyup)="enforceInputRestriction($event)" name="search" [formControl]="criteria" type="text">
 </div>
 <div>
   <label id="count">Display

@@ -27,6 +27,7 @@ export class SearchComponent implements OnInit {
       .pipe(
         filter(val => val && val.length >= 3),
         debounceTime(300),
+        distinctUntilChanged(),
         switchMap(inputVal => this.gitHubService.searchUsers(inputVal).pipe(
           tap((results:Results) => this.total_count = results.total_count),
           map((results: Results) => results.items)

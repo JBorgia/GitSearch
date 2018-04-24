@@ -4,7 +4,8 @@ import { HttpClient } from '@angular/common/http';
 import { User, Results } from './models/github.models';
 
 import { Observable } from 'rxjs/Observable';
-import { tap } from 'rxjs/operators';
+import { tap, catchError } from 'rxjs/operators';
+import 'rxjs/add/observable/throw';
 
 @Injectable()
 export class GithubService {
@@ -15,6 +16,8 @@ export class GithubService {
   ) { }
 
   searchUsers(inputVal: string): Observable<Results> {
-    return this.http.get<Results>(`${this.userUrl}${inputVal}`);
+    return this.http.get<Results>(`${this.userUrl}${inputVal}`).pipe(
+      catchError((error) => Observable.throw(error.error)),
+    )
   }
 }
