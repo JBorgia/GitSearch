@@ -15,6 +15,7 @@ export class GithubService {
     private http: HttpClient
   ) { }
 
+  // Added error handling (Production level would throw, while in development it would be displayed or tracked)
   searchUsers(inputVal: string): Observable<Results> {
     return this.http.get<Results>(`${this.userUrl}${inputVal}`).pipe(
       catchError((error) => Observable.throw(error.error)),
